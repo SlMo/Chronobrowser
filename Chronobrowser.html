@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <title>Chronobrowser</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Browser App Cronometro" />
+    <link rel="stylesheet" href="Chronobrowser.css" />
+    </script>
+  </head>
+  <body>
+    <header id="header">
+      <h2>Chronobrowser</h2>
+      <menu>
+        <button id="mass-start">PARTENZE TEORICHE</button>
+        <button id="reset">RESET TEMPI</button>
+      </menu>
+    </header>
+    <section>
+      <div id="massStartDiv">
+        <label>Dal pettorale
+          <input id="firstbib" type="number">
+        </label>
+        <label>Al pettorale
+          <input id="lastbib" type="number">
+        </label>
+        <label>Partenza del primo
+          <input id="massStartTime" type="text" placeholder="00:00:00.0">
+        </label>
+        <label>Distacco (in secondi)
+          <input id="difference" type="text">
+        </label>
+        <button id="cancel">ANNULLA</button>
+        <button id="confirmStarts">CONFERMA</button>
+      </div>
+      <div id="div-orologio">
+        <button id="clockRevealer">MOSTRA OROLOGIO</button>
+        <h1 id="orologio" style="display: none">00:00:00</h1>
+        <h1 id="cronometro">00:00'00.0</h1>
+        <button id="raceStarter">RACE START</button>
+        <button id="resetter" style="visibility: hidden">RESET</button>
+        <p id="massStartStamp">Ready to start</p>
+      </div>
+    </section>
+    <main>
+      <div id="div-partenze">
+        <h3>PARTENZE</h3>
+        <ol id="partenze">
+        </ol>
+      </div>
+      <div id="div-arrivi">
+        <h3>ARRIVI</h3>
+        <ol id="arrivi">
+        </ol>
+      </div>
+      <div id="div-risultati">
+        <div>
+          <h3 style="display: inline-block">TEMPI NETTI</h3>
+          <button id="aggiorna">
+            <img src="icons8-sincronizzare-24.png" width="12px"/>
+          </button>
+        </div>
+        <ol id="risultati">
+        </ol>
+      </div>
+    </main>
+    <script type="text/javascript" src="JS/Chronobrowser.js"></script>
+    <script type="text/javascript" src="JS/Chronometer.js"></script>
+  </body>
+</html>
